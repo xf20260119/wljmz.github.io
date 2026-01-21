@@ -1,0 +1,88 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>网络掘墓者</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="网络掘墓者" />
+	<meta name="keywords" content="Studio7designs" />
+	<meta name="author" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+<div id="menu-top">
+	<ul>
+		<li><a href="./index.html" title="Downloads"><span>首页</span></a></li>
+		<li><a href="./index.html" title="Gallery"><span>IPV6</span></a></li>
+		<li><a href="#" title="Links"><span>TCP</span></a></li>
+		<li><a href="#" title="Links"><span>ISIS</span></a></li>
+		<li><a href="#" title="Links"><span>OSPF/OSPFV3</span></a></li>
+        <li><a href="#" title="Links"><span>BGP</span></a></li>
+		<li><a href="#" title="Links"><span>EVPN/VXLAN</span></a></li>
+		<li><a href="#" title="Links"><span>SRV6</span></a></li>
+		<li><a href="#" title="Links"><span>QOS</span></a></li>
+	</ul>
+</div><!--menu-top-->
+
+<!-- -->
+<div id="wrapper-header">
+
+</div><!--header-->
+
+
+</div><!--wrapper-header-->
+
+<div id="wrapper-content">
+	<div id="wrapper-menu-page">
+	<div id="menu-page">
+		<h3><b>章节菜单</b></h3>
+		<ul>
+			<li><a href="./index.html">IPV6报文格式与原理</a></li>
+			<li><a href="#">ICMPv6</a></li>
+			<li><a href="#">IPV6地址分配</a></li>
+			<li><a href="#">IPV6分片</a></li>
+		</ul>		
+		
+		
+	</div><!--menu-page-->
+	</div><!--wrapper-menu-page-->
+	
+	<div id="content">
+		<h1>IPV6报文格式与原理</h1>
+		<p>报文格式 <a href="#">ip报文格式大全</a><br />
+		</p>
+		<p>Ipv6地址长度为128比特 ，每16比特划分为一段，每段由4个十六进制数表示，并用冒号隔开
+Ipv6也是网络层地址，使命也是逻辑寻址。</p> 
+		<p>网络号改成Ipv6前缀</p>
+		<p>广播域改成link链路</p> 
+		<h2>整个ipv6需要熟练掌握链路本地地址、组播mac映射、被请求节点组播地址</h1>
+		<img src="./images/ipv6地址.png">
+		<h2>1)单播地址，可聚合全球单播地址，2000::/3</h2>
+		<img src="./images/ipv6地址1.png"/>
+		<h2>2)单播地址，链路本地地址，类似mac地址</h2>
+		<p>①本链接有效、本链路上唯一、不产生路由</p>
+		<p>②起邻居、路由的下一跳、邻居通信</p>
+		<img src="./images/ipv6地址2.png"/>
+		<p>3)唯一本地地址：ipv6私网地址,为什么还要私网，主要是管理和建设角度，内网规划阶段不用和公网互通的时候，可以先用私网地址规划，也不会担心跑到公网去，后面要接入公网的时候，不会和公网冲突</p>
+		<img src="images/ipv6地址3.png"/>
+		<p>4)ipv6组播地址</p>
+		<img src="./images/ipv6地址4.png"/>
+		<p>组播地址和mac地址的映射，主要为了让收包的时候更早加组，比如组播报文发给交换机的时候，交换机会泛红给下面的主机，主机收到后（解封装，先解mac，看到三层才知道是否加组）</p>
+		<img src="./images/ipv6地址5.png"/>
+		<p>被请求节点组播地址：替代了v4里面的arp请求广播，泛洪到到所有的主机，由于要解封装到3层才会知道报文是不是自己的，很浪费资源和性能，v6用的被请求节点组播地址和组播地址和mac映射可以在mac层就识别是否是自己相应的报文，不需要到三层</p>
+		<img src="images/ipv6地址6.png"/>
+		<p>5)任播地址</p>
+		<img src="images/ipv6地址7.png"/>
+		
+		
+		
+ </div><!--content-->
+</div><!--wrapper-content-->
+
+<div id="wrapper-footer">
+	<div id="footer">网络掘墓者 | 版权2026</div>
+</div><!--wrapper-footer-->
+
+</body>
+</html>
